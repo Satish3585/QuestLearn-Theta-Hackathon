@@ -1,0 +1,12 @@
+{
+  "abc@gmail.com": {
+    "xp": 0,
+    "coins": 0,
+    "level": 1,
+    "streak": 0,
+    "last_active_date": null,
+    "completed_activities": [],
+    "badges": [],
+    "accuracy_log": []
+  }
+}

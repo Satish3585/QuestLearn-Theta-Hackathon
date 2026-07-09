@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #F7F5F0;
+  font-family: 'Nunito', sans-serif;
+}
+
+/* Trail connector lines between topic nodes */
+.trail-line {
+  width: 6px;
+  border-radius: 3px;
+  background-image: repeating-linear-gradient(to bottom, currentColor 0, currentColor 10px, transparent 10px, transparent 20px);
+}
+
+.node-pop {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.node-pop:hover {
+  transform: translateY(-3px);
+}
+.node-pop:active {
+  transform: translateY(1px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .node-pop { transition: none; }
+}
+
+:focus-visible {
+  outline: 3px solid #7C5CFC;
+  outline-offset: 2px;
+}
