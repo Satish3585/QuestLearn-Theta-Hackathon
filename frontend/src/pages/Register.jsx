@@ -17,8 +17,8 @@ export default function Register() {
     setError("");
     setLoading(true);
     try {
-      const data = await register(username, password, role, displayName);
-      navigate(data.role === "teacher" ? "/teacher" : "/student");
+await register(username, password, role, displayName);
+navigate("/login");  // ← go to login page after register
     } catch (err) {
       setError(err.message);
     } finally {

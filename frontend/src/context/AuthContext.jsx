@@ -20,11 +20,10 @@ export function AuthProvider({ children }) {
     return data;
   }, []);
 
-  const register = useCallback(async (username, password, role, display_name) => {
+const register = useCallback(async (username, password, role, display_name) => {
     const data = await api.register({ username, password, role, display_name });
-    persist(data);
-    return data;
-  }, []);
+    return data;   // ← just return, don't auto-login
+}, []);
 
   const logout = useCallback(async () => {
     if (session?.token) {
